@@ -1,0 +1,14 @@
+# Core
+numpy
+pandas
+
+# Visualização
+matplotlib
+seaborn
+
+# Machine Learning
+scikit-learn
+
+# Estatística
+scipy
+
