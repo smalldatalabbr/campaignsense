@@ -70,7 +70,7 @@ Nesta POC, os dados são utilizados exclusivamente como base analítica para dem
 ## Estrutura do Projeto
 
 ```
-campainsense/
+campaingsense/
 │
 ├── data/
 │   ├── raw/
