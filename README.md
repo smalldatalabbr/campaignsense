@@ -81,10 +81,13 @@ campaingsense/
 │   └── paths.py
 ├── notebooks/
 │   ├── 01-data_audit_eda.ipynb
-│   └── 02-eda_decision.ipynb
+│   ├── 02-eda_decision.ipynb
+│   └── 03-segmentation.ipynb
 ├── references/
 │   └── 01_dicionario_de_dados.md
 ├── reports/
+│   ├── plots/
+│   └── tables/
 ├── requirements.txt
 └── README.md
 ```

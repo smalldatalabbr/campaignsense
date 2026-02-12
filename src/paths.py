@@ -18,6 +18,8 @@ PROCESSED_FOLDER = DATA_FOLDER / "processed"
 
 MODELS_FOLDER = BASE_PATH / "models"
 REPORTS_FOLDER = BASE_PATH / "reports"
+TABLES_FOLDER = REPORTS_FOLDER / "tables"
+PLOTS_FOLDER = REPORTS_FOLDER / "plots"
 
 # data/raw
 RAW_DATA = RAW_FOLDER / "customer_marketing_campaigns.csv"
@@ -26,4 +28,8 @@ RAW_DATA = RAW_FOLDER / "customer_marketing_campaigns.csv"
 PROCESSED_TRAIN = PROCESSED_FOLDER / "train.parquet"
 PROCESSED_VALID = PROCESSED_FOLDER / "valid.parquet"
 PROCESSED_TEST  = PROCESSED_FOLDER / "test.parquet"
+SEGMENTS_OUTPUT = PROCESSED_FOLDER / "segments.parquet"
 PROCESSED_SPLIT_METADATA = PROCESSED_FOLDER / "split_metadata.json"
+
+# reports
+SEGMENTS_PROFILE = TABLES_FOLDER  / "segment_profile.csv"
