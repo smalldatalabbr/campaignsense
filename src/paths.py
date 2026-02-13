@@ -20,6 +20,8 @@ MODELS_FOLDER = BASE_PATH / "models"
 REPORTS_FOLDER = BASE_PATH / "reports"
 TABLES_FOLDER = REPORTS_FOLDER / "tables"
 PLOTS_FOLDER = REPORTS_FOLDER / "plots"
+METRICS_FOLDER = REPORTS_FOLDER / "metrics"
+
 
 # data/raw
 RAW_DATA = RAW_FOLDER / "customer_marketing_campaigns.csv"

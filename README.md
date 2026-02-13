@@ -82,17 +82,17 @@ campaingsense/
 ├── notebooks/
 │   ├── 01-data_audit_eda.ipynb
 │   ├── 02-eda_decision.ipynb
-│   └── 03-segmentation.ipynb
+│   ├── 03-segmentation.ipynb
+│   └── 04-modeling.ipynb
 ├── references/
 │   └── 01_dicionario_de_dados.md
 ├── reports/
-│   ├── plots/
+│   ├── plots/      # visualizações (matriz de confusão, PR curves)
+│   ├── metrics/    # métricas dos modelos (XGBoost , valid/test)
 │   └── tables/
 ├── requirements.txt
 └── README.md
 ```
-
----
 
 ## Como Rodar o Projeto
 
