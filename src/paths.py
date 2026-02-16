@@ -30,8 +30,10 @@ RAW_DATA = RAW_FOLDER / "customer_marketing_campaigns.csv"
 PROCESSED_TRAIN = PROCESSED_FOLDER / "train.parquet"
 PROCESSED_VALID = PROCESSED_FOLDER / "valid.parquet"
 PROCESSED_TEST  = PROCESSED_FOLDER / "test.parquet"
-SEGMENTS_OUTPUT = PROCESSED_FOLDER / "segments.parquet"
+PROCESSED_SEGMENTS = PROCESSED_FOLDER / "segments.parquet"
 PROCESSED_SPLIT_METADATA = PROCESSED_FOLDER / "split_metadata.json"
 
 # reports
-SEGMENTS_PROFILE = TABLES_FOLDER  / "segment_profile.csv"
+SEGMENTS_PROFILE = TABLES_FOLDER / "segment_profile.csv"
+CUSTOMER_LIST= TABLES_FOLDER  / "customer_list.csv"
+DECISION_SUMARY = TABLES_FOLDER  / "decision_summary.csv"

@@ -23,5 +23,18 @@
       "capping": "p99"
     },
     "ref_date": "2014-06-29"
-  }
+  },
+  "feature_derivations": [
+    {
+      "name": "deterministic_features_v1",
+      "features_added": [
+        "TotalSpend",
+        "AcceptedCmpTotal"
+      ],
+      "logic": {
+        "TotalSpend": "sum(MntWines, MntFruits, MntMeatProducts, MntFishProducts, MntSweetProducts, MntGoldProds)",
+        "AcceptedCmpTotal": "sum(AcceptedCmp1..AcceptedCmp5)"
+      }
+    }
+  ]
 }
