@@ -118,7 +118,6 @@ campaignsense/
 │   └── campaignsense_summary.md
 │
 └── README.md
-
 ```
 
 ---
@@ -134,6 +133,18 @@ A POC entrega:
 - regras de priorização baseadas em retorno esperado;
 - estimativa de impacto financeiro da campanha;
 - artefatos analíticos e executivos para suporte à decisão.
+
+---
+
+## Como executar
+
+### Ambiente virtual
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
 
 ---
 
