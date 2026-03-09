@@ -1,135 +1,139 @@
 # CampaignSense
 
-**CRM Analytics para Otimização de Campanhas de Marketing**
+**CRM analytics para priorização de clientes e otimização de campanhas orientadas a ROI.**
 
 ![Author](https://img.shields.io/badge/author-Jhonathan%20Domingues-lightgrey)
 ![License](https://img.shields.io/badge/license-MIT-blue)
-![Status](https://img.shields.io/badge/status-Concluída-green)
+![Status](https://img.shields.io/badge/status-completed-green)
 
-![Python](https://img.shields.io/badge/python-3.12.5-blue?logo=python&logoColor=white)
-![ML](https://img.shields.io/badge/ml-scikit--learn-orange?logo=scikitlearn&logoColor=white)
-![Model](https://img.shields.io/badge/model-LightGBM-black)
-![Model](https://img.shields.io/badge/model-XGBoost-black)
-![Data](https://img.shields.io/badge/data-Pandas%20%7C%20NumPy-blue)
-![Stats](https://img.shields.io/badge/stats-SciPy-informational)
-![Viz](https://img.shields.io/badge/viz-Matplotlib%20%7C%20Seaborn-purple)
-![Persistence](https://img.shields.io/badge/persistence-Joblib-gray)
+![Python](https://img.shields.io/badge/python-3.10.12-blue?logo=python&logoColor=white)
+![Scikit-learn](https://img.shields.io/badge/ml-scikit--learn-orange?logo=scikitlearn&logoColor=white)
+![LightGBM](https://img.shields.io/badge/model-LightGBM-black)
+![XGBoost](https://img.shields.io/badge/model-XGBoost-black)
+![Pandas](https://img.shields.io/badge/Pandas-blue)
+![NumPy](https://img.shields.io/badge/NumPy-blue)
+![SciPy](https://img.shields.io/badge/stats-SciPy-informational)
 
-![CampaignSense](imagens/thumbnail.png)
+![CampaignSense](references/campaignsense-results.png)
 
 ---
 
 ## Visão Geral
 
-A **CampaignSense** é uma Proof of Concept (POC) de **CRM Analytics** voltada à **otimização de campanhas de marketing**, com foco explícito em **decisão de negócio** e **impacto financeiro**.
+A **CampaignSense** é uma Proof of Concept (POC) de **CRM Analytics** que demonstra como dados de clientes e histórico de campanhas podem ser utilizados para **priorizar contatos com maior retorno esperado**.
 
-A proposta da POC é demonstrar como dados de clientes e histórico de campanhas podem ser utilizados para **priorizar contatos**, reduzindo desperdício de orçamento e maximizando o **lucro esperado** de uma campanha.
+O projeto trata modelos de Machine Learning como **componentes de suporte à decisão**, conectando três elementos principais de sistemas analíticos aplicados a marketing:
 
-O projeto trata modelos de Machine Learning como **componentes de suporte à decisão**, e não como um fim em si mesmos. O valor central da solução está na conexão clara entre:
+- estimativa de **propensão de resposta**;
+- definição de **regras de priorização de clientes**;
+- avaliação de **impacto financeiro esperado da campanha**.
 
-- dados de clientes;
-- estimativa de propensão à resposta;
-- regras de decisão;
-- impacto financeiro esperado.
+A proposta é demonstrar como scores analíticos podem ser transformados em **decisões operacionais claras**, alinhadas a custo de contato e retorno esperado.
 
 ---
 
 ## Problema de Negócio
 
-Em campanhas de marketing tradicionais, é comum que empresas impactem grandes parcelas da base de clientes sem distinção clara de potencial de retorno, o que leva a:
+Em campanhas de marketing tradicionais, é comum que empresas impactem grandes parcelas da base de clientes sem distinção clara de potencial de retorno.
+
+Esse cenário pode gerar problemas como:
 
 - desperdício de orçamento com clientes de baixa propensão;
 - baixo retorno incremental das campanhas;
 - dificuldade de justificar decisões de targeting com base em critérios objetivos.
 
-A **CampaignSense** endereça esse problema ao propor uma abordagem orientada a **profit targeting**, na qual apenas clientes com **retorno esperado positivo** são priorizados para contato.
+A **CampaignSense** busca endereçar esse cenário utilizando modelos preditivos para estimar a probabilidade de resposta e definir **políticas de priorização baseadas em retorno esperado**.
 
 ---
 
-## Escopo da POC
+## Abordagem da Solução
 
-A CampaignSense contempla:
+A POC implementa um pipeline completo de **CRM analytics orientado à decisão**:
 
-- análise exploratória orientada à decisão de negócio;
-- segmentação de clientes para identificação de perfis comportamentais;
+- auditoria e análise exploratória dos dados de clientes e campanhas;
+- segmentação comportamental de clientes;
 - modelagem preditiva de propensão à resposta;
-- definição explícita de regras de decisão baseadas em ganho e custo;
-- geração de artefatos analíticos e executivos que suportam decisões de campanha.
+- comparação entre modelos candidatos (LightGBM e XGBoost);
+- conversão do score em **regra objetiva de priorização**;
+- estimativa de impacto financeiro esperado da campanha.
+
+A abordagem busca conectar modelagem estatística a **decisões acionáveis de marketing**, indo além da previsão isolada de resposta.
 
 ---
 
-## Fonte dos Dados
+## Tecnologias Utilizadas
 
-A POC utiliza um **dataset público**, originalmente disponibilizado como parte de um **case técnico de CRM Analytics**, proposto no contexto de um processo seletivo conduzido por uma grande empresa do setor de delivery no Brasil.
+- Python  
+- Pandas / NumPy  
+- SciPy  
+- Scikit-learn  
+- LightGBM  
+- XGBoost  
+- Matplotlib / Seaborn  
 
-O dataset circulou por meio de repositórios públicos de código, hoje indisponíveis, e é amplamente utilizado como referência prática em estudos e demonstrações de **CRM Analytics**.
+---
 
-Nesta POC, os dados são utilizados exclusivamente como base analítica para demonstrar a construção de uma solução orientada à decisão e ao impacto financeiro, sem qualquer vínculo institucional ou comercial com a empresa que originou o case.
+## Pipeline Analítico
+
+1. Auditoria e preparação dos dados de clientes  
+2. Análise exploratória orientada à decisão de negócio  
+3. Segmentação comportamental de clientes  
+4. Treinamento e validação de modelos preditivos  
+5. Seleção do modelo campeão  
+6. Conversão de scores em regras de priorização  
+7. Estimativa de impacto financeiro esperado da campanha  
+8. Geração de artefatos analíticos e executivos  
 
 ---
 
 ## Estrutura do Projeto
 
 ```
+
 campaignsense/
-│
+
 ├── data/
-│   ├── raw/                    # dados brutos de campanhas e clientes
-│   └── processed/              # dados tratados e splits (train/valid/test/segment)
-│
-├── imagens/
-│   └── thumbnail.png           # imagem de capa da POC
+│   ├── raw/
+│   └── processed/
 │
 ├── src/
-│   ├── evaluation.py           # funções auxiliares para avaliação e agregação de resultados
-│   └── paths.py                # centralização de caminhos e diretórios do projeto
+│   ├── evaluation.py
+│   └── paths.py
 │
 ├── notebooks/
-│   ├── 01-data_audit_eda.ipynb # ingestão, auditoria e EDA inicial da base
-│   ├── 02-eda_decision.ipynb   # EDA orientada à decisão de negócio
-│   ├── 03-segmentation.ipynb   # segmentação comportamental de clientes
-│   ├── 04-modeling.ipynb       # modelagem preditiva de propensão à resposta
-│   └── 05-profit_targeting.ipynb # definição de política de decisão e profit targeting
+│   ├── 01-data_audit_eda.ipynb
+│   ├── 02-eda_decision.ipynb
+│   ├── 03-segmentation.ipynb
+│   ├── 04-modeling.ipynb
+│   └── 05-profit_targeting.ipynb
 │
 ├── references/
-│   └── 01_dicionario_de_dados.md # dicionário e descrição das variáveis do dataset
+│   ├── 01_dicionario_de_dados.md
+│   └── campaignsense-results.png
 │
 ├── reports/
-│   ├── plots/                  # visualizações analíticas e executivas
-│   ├── metrics/                # métricas e políticas de decisão (JSON)
-│   ├── tables/                 # listas priorizadas e quebras analíticas
-│   └── campaignsense_summary.md # relatório executivo final da POC
+│   ├── plots/
+│   ├── metrics/
+│   ├── tables/
+│   └── campaignsense_summary.md
 │
-├── requirements.txt            # dependências do projeto
-└── README.md                   # documentação principal da POC
+└── README.md
+
 ```
 
 ---
 
-## Pipeline da Solução
+## Resultados
 
-A CampaignSense segue um pipeline analítico orientado à decisão:
+A CampaignSense demonstra como análises de CRM podem ser estruturadas para apoiar decisões de campanha orientadas a valor.
 
-1. Preparação e auditoria dos dados de clientes e campanhas  
-2. Análise exploratória com foco em alavancas de negócio  
-3. Segmentação comportamental de clientes  
-4. Estimativa de propensão à resposta por meio de modelos preditivos  
-5. Conversão do score em **regra objetiva de priorização**  
-6. Estimativa de impacto financeiro esperado da campanha  
+A POC entrega:
 
-O ciclo se encerra com a geração de artefatos acionáveis, incluindo listas priorizadas de clientes e um **Campaign Summary** executivo.
-
----
-
-## Conclusão
-
-A CampaignSense demonstra como análises de CRM podem ser estruturadas para apoiar decisões de campanha orientadas a valor, indo além da previsão isolada de resposta.
-
-Ao longo da POC, dados de clientes, segmentação comportamental e modelos preditivos foram integrados a uma lógica explícita de decisão, permitindo a definição de regras objetivas de priorização e a estimativa de impacto financeiro esperado.
-
-Mais do que maximizar métricas de modelo, a proposta da CampaignSense é evidenciar que o papel do Machine Learning em contextos de marketing está na **tradução de sinais analíticos em decisões justificáveis, rastreáveis e acionáveis**, alinhadas a custo, retorno e eficiência operacional.
-
-Embora os resultados numéricos dependam de hipóteses e do contexto específico de cada campanha, a estrutura apresentada é diretamente aplicável a cenários reais de CRM Analytics, oferecendo um framework claro para priorização de clientes e avaliação de trade-offs de negócio.
+- modelo preditivo de propensão à resposta;
+- segmentação comportamental de clientes;
+- regras de priorização baseadas em retorno esperado;
+- estimativa de impacto financeiro da campanha;
+- artefatos analíticos e executivos para suporte à decisão.
 
 ---
 
@@ -137,27 +141,37 @@ Embora os resultados numéricos dependam de hipóteses e do contexto específico
 
 **POC concluída**
 
-Este repositório representa uma entrega fechada e consolidada, demonstrando a aplicação de CRM Analytics para suporte estruturado à decisão em campanhas de marketing.
-
----
-
-## Licença
-
-Este projeto está licenciado sob os termos da **MIT License**. Consulte o arquivo `LICENSE` para mais detalhes.
+Este repositório representa uma entrega consolidada de CRM Analytics aplicada à priorização de campanhas de marketing.
 
 ---
 
 ## Disclaimer
 
-A **CampaignSense** é uma Proof of Concept desenvolvida com fins demonstrativos, voltada à documentação e avaliação de abordagens analíticas para otimização de campanhas de marketing.
+Esta POC foi desenvolvida exclusivamente para fins demonstrativos.
 
-Os dados utilizados são públicos e não contêm informações pessoais, sensíveis ou sigilosas.  
-Este projeto não deve ser utilizado diretamente em ambientes produtivos sem as devidas adaptações.
+Os dados utilizados são públicos e não contêm informações pessoais ou sensíveis.  
+O projeto não deve ser utilizado diretamente em ambientes produtivos.
+
+---
+
+## Small Data Lab – Portfolio
+
+Este projeto faz parte do **Small Data Lab**, um laboratório técnico dedicado à experimentação aplicada em dados, analytics e sistemas de IA.
+
+Explore também outras POCs do laboratório:
+  
+- [LakeFlow](https://github.com/smalldatalabbr/lakeflow) — Pipeline Lakehouse para ingestão e organização de dados externos.  
+- [RetailLens BI](https://github.com/smalldatalabbr/retaillens-bi) — Camada analítica BI-ready para diagnóstico operacional em e-commerce.  
+- [DelayImpact](https://github.com/smalldatalabbr/delayimpact-analytics) — Análise que investiga o impacto de atrasos logísticos na satisfação do cliente.   
+- [FraudWatch](https://github.com/smalldatalabbr/fraudwatch) — Sistema de decisão antifraude que transforma scores de ML em políticas operacionais auditáveis.  
+- [DocLens](https://github.com/smalldatalabbr/doclens) — Chatbot RAG com guardrails e testes adversariais para governança de LLMs.
 
 ---
 
 ## Onde me encontrar
 
-[![Website](https://img.shields.io/badge/🌐%20Website-Portfólio-black)](https://jhonathan.me)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Perfil-blue?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jhonathandomingues)
-[![Email](https://img.shields.io/badge/Email-Contato-success?logo=minutemailer&logoColor=white)](mailto:hello@jhonathan.me)
+[Portfólio](https://jhonathan.me) | [LinkedIn](https://www.linkedin.com/in/jhonathandomingues) | [Email](mailto:hello@jhonathan.me)
+
+---
+
+Este repositório é licenciado sob a MIT License.
